@@ -15,7 +15,7 @@ export function Hero() {
           <p className="mb-4 inline-flex rounded-full border border-brand/15 bg-brand-soft px-3 py-1 text-sm font-bold text-brand">
             {t.hero.formatBadge}
           </p>
-          <p className="mb-3 text-sm font-bold text-brand">{t.hero.courseName}</p>
+          <p className="mb-3 text-sm font-bold text-brand">{t.trustBar.items.join(" + ")}</p>
           <h1 className="text-4xl font-extrabold leading-[1.2] text-slate-900 sm:text-5xl lg:text-[56px]">
             {t.hero.headline}{" "}
             <span className="text-brand">{t.hero.headlineAccent}</span>
