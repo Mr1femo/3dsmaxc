@@ -14,7 +14,7 @@ export const siteConfig = {
   phase: 1,
   previewCouponCode: "STUDENT10",
   offer: {
-    discountUsd: 350,
+    originalPriceUsd: 335,
     studentPriceIqd: 150000,
     format: "pre-recorded" as const,
   },

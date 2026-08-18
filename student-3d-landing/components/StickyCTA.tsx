@@ -31,8 +31,8 @@ export function StickyCTA() {
         onClick={() => trackEvent("hero_cta_click", { source: "sticky_mobile" })}
         className="btn-primary flex min-h-12 items-center justify-between rounded-xl px-5 font-bold"
       >
-        <span>{t.hero.discountValue}</span>
-        <span className="text-sm">{t.hero.discountLabel}</span>
+        <span>{t.hero.offerPunchline}</span>
+        <span className="text-sm">{t.hero.offerHook}</span>
       </a>
     </div>
   );

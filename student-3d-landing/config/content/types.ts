@@ -82,6 +82,10 @@ export type LandingContent = {
     courseName: string;
     discountLabel: string;
     discountValue: string;
+    offerHook: string;
+    offerPunchline: string;
+    originalPriceLabel: string;
+    originalPriceValue: string;
     priceLabel: string;
     priceValue: string;
     priceCurrency: string;

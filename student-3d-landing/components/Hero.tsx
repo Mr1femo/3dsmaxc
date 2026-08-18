@@ -25,14 +25,30 @@ export function Hero() {
           </p>
 
           <div className="mt-7 overflow-hidden rounded-3xl border-2 border-brand bg-brand px-5 py-5 text-white sm:px-7 sm:py-6">
-            <p className="text-base font-extrabold sm:text-xl">{t.hero.discountLabel}</p>
-            <p className="mt-1 text-6xl font-black leading-none tracking-tight sm:text-8xl">
-              {t.hero.discountValue}
+            <p className="text-lg font-extrabold text-violet-100 sm:text-2xl">
+              {t.hero.offerHook}
             </p>
-            <p className="mt-3 text-sm font-bold text-violet-100 sm:text-base">
-              {t.hero.priceLabel}: {t.hero.priceValue} {t.hero.priceCurrency}
+            <p className="mt-2 text-4xl font-black leading-[1.15] tracking-tight sm:text-6xl">
+              {t.hero.offerPunchline}
             </p>
-            <p className="mt-2 text-sm font-bold text-white">{t.hero.formatNote}</p>
+            <div className="mt-5 flex flex-wrap items-end gap-6">
+              <div>
+                <p className="text-sm font-bold text-violet-200">{t.hero.originalPriceLabel}</p>
+                <p className="mt-1 text-2xl font-black text-violet-200/80 line-through decoration-white/50">
+                  {t.hero.originalPriceValue}
+                </p>
+              </div>
+              <div>
+                <p className="text-sm font-bold text-white">{t.hero.priceLabel}</p>
+                <p className="mt-1 text-4xl font-black leading-none sm:text-5xl">
+                  {t.hero.priceValue}
+                </p>
+                <p className="mt-1 text-base font-extrabold text-white">
+                  {t.hero.priceCurrency}
+                </p>
+              </div>
+            </div>
+            <p className="mt-4 text-sm font-bold text-white">{t.hero.formatNote}</p>
           </div>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
