@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f7ff;
+  --foreground: #0f172a;
+  --muted: #64748b;
+  --brand: #7c3aed;
+  --brand-dark: #6d28d9;
+  --brand-soft: #f3e8ff;
+  --card: #ffffff;
+  --line: #e9e4f7;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-soft: var(--brand-soft);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --font-sans: var(--font-tajawal);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-tajawal), "Segoe UI", sans-serif;
+}
+
+::selection {
+  background: rgba(124, 58, 237, 0.18);
+  color: #1e1b4b;
+}
+
+.hero-wash {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(167, 139, 250, 0.28), transparent 32%),
+    radial-gradient(circle at 12% 8%, rgba(221, 214, 254, 0.7), transparent 36%),
+    linear-gradient(180deg, #ffffff 0%, #f8f7ff 100%);
+}
+
+.soft-card {
+  background: #ffffff;
+  border: 1px solid rgba(124, 58, 237, 0.08);
+  box-shadow: 0 18px 50px rgba(91, 33, 182, 0.08);
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(124, 58, 237, 0.28);
+}
+
+.btn-primary:hover {
+  background: var(--brand-dark);
+}
+
+.purple-blob {
+  background: radial-gradient(circle at 50% 45%, #ddd6fe 0%, #c4b5fd 38%, #a78bfa 68%, transparent 70%);
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
