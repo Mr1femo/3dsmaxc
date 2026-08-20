@@ -26,7 +26,7 @@ export function FinalCTA() {
           >
             {t.finalCta.cta}
           </a>
-          <p className="mt-3 text-sm text-violet-100">يظهر الكوبون مباشرة بعد التسجيل</p>
+          <p className="mt-3 text-sm text-violet-100">الكوبون يصلك على واتساب خلال الأيام القادمة</p>
         </div>
       </div>
     </section>

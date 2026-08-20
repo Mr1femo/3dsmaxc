@@ -22,8 +22,8 @@ export const siteConfig = {
     twitterHandle: "",
   },
   support: {
-    instagram: "KARAZ_CH",
-    instagramUrl: "https://instagram.com/KARAZ_CH",
+    instagram: "karaz_ch",
+    instagramUrl: "https://www.instagram.com/karaz_ch/",
     whatsapp: "07760980906",
     whatsappUrl: "https://wa.me/9647760980906",
   },

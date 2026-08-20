@@ -186,6 +186,11 @@ export type LandingContent = {
     duplicateTitle: string;
     subtitle: string;
     duplicateSubtitle: string;
+    whatsappWait: string;
+    groupNote: string;
+    instagramNote: string;
+    instagramCta: string;
+    closeCta: string;
     exploreCta: string;
   };
   faq: {
