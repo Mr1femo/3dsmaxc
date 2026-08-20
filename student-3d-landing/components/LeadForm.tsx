@@ -2,6 +2,7 @@
 
 import { FormEvent, useMemo, useState, type ReactNode } from "react";
 import { CouponSuccess } from "@/components/CouponSuccess";
+import { SelectMenu } from "@/components/SelectMenu";
 import { siteConfig } from "@/config/landingPage";
 import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/cn";
@@ -198,20 +199,15 @@ export function LeadForm() {
               />
             </Field>
             <Field id="governorate" label={t.form.fields.governorate} error={errors.governorate}>
-              <select
-                {...inputProps("governorate")}
-                className={inputClass}
+              <SelectMenu
+                id="governorate"
+                name="governorate"
                 value={values.governorate}
-                onChange={(event) => update("governorate", event.target.value)}
-                autoComplete="address-level1"
-              >
-                <option value="">—</option>
-                {t.form.governorateOptions.map((option) => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
+                options={t.form.governorateOptions}
+                invalid={Boolean(errors.governorate)}
+                describedBy={errors.governorate ? "governorate-error" : undefined}
+                onChange={(value) => update("governorate", value)}
+              />
             </Field>
             <Field id="address" label={t.form.fields.address} error={errors.address}>
               <textarea
@@ -248,19 +244,15 @@ export function LeadForm() {
               label={t.form.fields.academicYear}
               error={errors.academicYear}
             >
-              <select
-                {...inputProps("academicYear")}
-                className={inputClass}
+              <SelectMenu
+                id="academicYear"
+                name="academicYear"
                 value={values.academicYear}
-                onChange={(event) => update("academicYear", event.target.value)}
-              >
-                <option value="">—</option>
-                {t.form.academicYearOptions.map((option) => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
+                options={t.form.academicYearOptions}
+                invalid={Boolean(errors.academicYear)}
+                describedBy={errors.academicYear ? "academicYear-error" : undefined}
+                onChange={(value) => update("academicYear", value)}
+              />
             </Field>
           </fieldset>
 
